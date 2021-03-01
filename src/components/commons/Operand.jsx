@@ -14,7 +14,7 @@ const Operand = ({ value, className }) => {
 };
 
 Operand.propTypes = {
-  value: PropTypes.instanceOf([PropTypes.string, PropTypes.number]).isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   className: PropTypes.string,
 };
 
