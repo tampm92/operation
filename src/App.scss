@@ -1,0 +1,172 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.custom-button {
+  font-family: "Helvetica Neue" !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+
+  &:hover {
+    box-shadow: none !important;
+  }
+}
+
+.MuiButton-containedPrimary {
+  background-color: #79cea1 !important;
+}
+
+.App {
+  font-family: "Helvetica Neue" !important;
+  width: 1080px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  .app-content {
+    display: block;
+    width: 100%;
+  }
+
+  .header {
+    margin-top: 70px;
+  }
+
+  .title {
+    color: rgb(80, 227, 194);
+    font-size: 120px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .add-number {
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  .operand {
+    width: 50px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ecf5f7;
+    font-size: 18px;
+  }
+
+  .expression {
+    margin-top: 60px;
+
+    .operators {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .operator {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    .equal {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 48px;
+      color: #838383;
+    }
+
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      color: rgb(80, 227, 194);
+      font-size: 64px;
+    }
+  }
+
+  .add-operation {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .App {
+    width: 992px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .App {
+    width: 768px;
+  }
+}
+
+@media (max-width: 992px) {
+  .App {
+    width: 640px;
+
+    .title {
+      font-size: 80px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    width: 540px;
+
+    .title {
+      font-size: 80px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .App {
+    width: 375px;
+
+    .title {
+      font-size: 60px;
+    }
+
+    .expression {
+      margin-top: 40px;
+
+      .equal {
+        margin-top: 10p;
+      }
+
+      .result {
+        margin-top: 10px;
+      }
+    }
+
+    .add-operation {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    width: 320px;
+
+    .title {
+      font-size: 60px;
+    }
+  }
+}
