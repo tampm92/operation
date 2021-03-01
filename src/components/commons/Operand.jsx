@@ -4,7 +4,13 @@ import classnames from 'classnames';
 
 const Operand = ({ value, className }) => {
   const classes = classnames('operand', className);
-  return <div className={classes}>{value}</div>;
+  return (
+    <div className={classes}>
+      <div>
+        <span>{value}</span>
+      </div>
+    </div>
+  );
 };
 
 Operand.propTypes = {

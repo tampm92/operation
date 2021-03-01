@@ -73,6 +73,13 @@ input[type='number'] {
     justify-content: center;
     background-color: #ecf5f7;
     font-size: 18px;
+
+    div {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   .expression {
@@ -100,6 +107,7 @@ input[type='number'] {
       margin-top: 20px;
       color: rgb(80, 227, 194);
       font-size: 64px;
+      word-break: break-all;
     }
   }
 
@@ -156,7 +164,13 @@ input[type='number'] {
 
       .result {
         margin-top: 10px;
+        font-size: 32px;
       }
+    }
+
+    .operand {
+      font-size: 14px;
+      height: 40px;
     }
 
     .add-operation {
