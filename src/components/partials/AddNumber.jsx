@@ -50,9 +50,9 @@ const AddNumber = () => {
             id="filled-basic"
             label="Please enter a number"
             className={style.inputRoot}
+            type="number"
             value={number}
             onChange={(e) => setNumber(e.target.value)}
-            type="number"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -60,7 +60,7 @@ const AddNumber = () => {
             variant="contained"
             color="primary"
             className={buttonClasses}
-            onClick={() => onChange(parseInt(number, 10))}
+            onClick={() => onChange(number)}
           >
             Add number
           </Button>
