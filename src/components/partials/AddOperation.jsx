@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Input from '../commons/Input';
 import SelectInput from '../commons/SelectInput';
+import isNumber from '../../utils/isNumber';
 import { setSecondOperandAction, setOperatorAction } from '../../actions';
 
 const useStyles = makeStyles(() => ({
@@ -50,8 +51,10 @@ const AddNumber = () => {
   ];
 
   const onClick = () => {
-    dispatch(setSecondOperandAction(parseInt(operand, 10)));
-    dispatch(setOperatorAction(operator));
+    const number = parseInt(operand, 10);
+
+    if (isNumber(number)) dispatch(setSecondOperandAction(number));
+    if (operator) dispatch(setOperatorAction(operator));
   };
 
   return (

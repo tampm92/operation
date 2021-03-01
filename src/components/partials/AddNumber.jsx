@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import classnames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Input from '../commons/Input';
 import { setFirstOperandAction } from '../../actions';
+import isNumber from '../../utils/isNumber';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -26,9 +28,14 @@ const AddNumber = () => {
 
   const dispatch = useDispatch();
 
+  const history = useHistory();
+
   const onChange = (value) => {
     const newValue = parseInt(value, 10);
-    dispatch(setFirstOperandAction(newValue));
+    if (isNumber(newValue)) {
+      dispatch(setFirstOperandAction(newValue));
+      history.push('/result');
+    }
   };
 
   const style = useStyles();

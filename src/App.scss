@@ -6,7 +6,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type="number"] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -15,7 +15,7 @@ input[type="number"] {
 }
 
 .custom-button {
-  font-family: "Helvetica Neue" !important;
+  font-family: 'Helvetica Neue' !important;
   text-transform: none !important;
   box-shadow: none !important;
 
@@ -28,8 +28,12 @@ input[type="number"] {
   background-color: #79cea1 !important;
 }
 
+.expend {
+  animation: expand 0.8s ease forwards;
+}
+
 .App {
-  font-family: "Helvetica Neue" !important;
+  font-family: 'Helvetica Neue' !important;
   width: 1080px;
   margin: auto;
   display: flex;
@@ -59,7 +63,9 @@ input[type="number"] {
   }
 
   .operand {
-    width: 50px;
+    min-width: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 60px;
     border-radius: 5px;
     display: flex;
@@ -70,8 +76,7 @@ input[type="number"] {
   }
 
   .expression {
-    margin-top: 60px;
-
+    margin-top: 200px;
     .operators {
       display: flex;
       align-items: center;
@@ -99,7 +104,7 @@ input[type="number"] {
   }
 
   .add-operation {
-    margin-top: 80px;
+    margin-top: 120px;
   }
 }
 
@@ -144,8 +149,7 @@ input[type="number"] {
     }
 
     .expression {
-      margin-top: 40px;
-
+      margin-top: 250px;
       .equal {
         margin-top: 10p;
       }
@@ -156,7 +160,7 @@ input[type="number"] {
     }
 
     .add-operation {
-      margin-top: 50px;
+      margin-top: 80px;
     }
   }
 }
@@ -168,5 +172,14 @@ input[type="number"] {
     .title {
       font-size: 60px;
     }
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
