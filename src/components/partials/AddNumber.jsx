@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import classnames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import Input from '../commons/Input';
 import { setFirstOperandAction } from '../../actions';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
   },
@@ -24,13 +24,11 @@ const useStyles = makeStyles((theme) => ({
 const AddNumber = () => {
   const [number, setNumber] = useState('');
 
-  const firstOperand = useSelector((state) => state.expression.firstOperand);
-
   const dispatch = useDispatch();
 
   const onChange = (value) => {
     const newValue = parseInt(value, 10);
-    dispatch(setFirstOperandAction(value));
+    dispatch(setFirstOperandAction(newValue));
   };
 
   const style = useStyles();

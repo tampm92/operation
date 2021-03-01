@@ -72,5 +72,6 @@ module.exports = {
     'implicit-arrow-linebreak': 0,
     'operator-linebreak': 0,
     'object-shorthand': 0,
+    'func-names': 0,
   },
 };

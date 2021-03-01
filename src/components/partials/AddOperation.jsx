@@ -8,7 +8,7 @@ import Input from '../commons/Input';
 import SelectInput from '../commons/SelectInput';
 import { setSecondOperandAction, setOperatorAction } from '../../actions';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
   },
